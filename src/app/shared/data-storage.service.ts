@@ -3,7 +3,7 @@ import { Http, Response } from "@angular/http";
 import { RecipeService } from "../recipes/recipe.service";
 import { Recipe } from "../recipes/recipe.model";
 
-import { map, subscribeOn } from 'rxjs/operators';
+import { map } from 'rxjs/operators';
 import { AuthService } from "../auth/auth.service";
 
 
