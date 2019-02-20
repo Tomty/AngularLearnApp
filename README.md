@@ -1,6 +1,6 @@
 # MyFirstApp
 
-This is a project made for learning Angular. It allow the user to manage recipes.
+This is a project made for learning Angular. It allow the user to manage recipes and a shopping list.
 
 # What I Learned
 
@@ -12,3 +12,4 @@ This is a project made for learning Angular. It allow the user to manage recipes
 * Forms (Template Driven and Reactive )
 * Http Module
 * Lazy Loading Module, Pre-Loading module
+* Using NgRx Store and NgRx Effects
