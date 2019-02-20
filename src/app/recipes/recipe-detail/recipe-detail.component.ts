@@ -3,6 +3,9 @@ import { Recipe } from '../recipe.model';
 import { ShoppingListService } from '../../shopping-list/shopping-list.service';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { RecipeService } from '../recipe.service';
+import { Store } from '@ngrx/store';
+import * as SLActions from '../../shopping-list/store/shopping-list.actions';
+import * as fromShoppingList from '../../shopping-list/store/shopping-list.reducers';
 
 @Component({
   selector: 'app-recipe-detail',
@@ -17,7 +20,9 @@ export class RecipeDetailComponent implements OnInit {
   constructor(private shoppingListService: ShoppingListService,
               private recipeService: RecipeService, 
               private route: ActivatedRoute,
-              private router: Router) { }
+              private router: Router,
+              private store: Store<fromShoppingList.AppState>
+            ) { }
 
   ngOnInit() {
     this.route.params.subscribe(
@@ -27,7 +32,11 @@ export class RecipeDetailComponent implements OnInit {
   }
 
   toShoppingList(){
-    this.shoppingListService.addIngredientFromShoppingList(this.recipe.ingredients);
+    //Services
+    //this.shoppingListService.addIngredientFromShoppingList(this.recipe.ingredients);
+
+    //NgRx Store
+    this.store.dispatch(new SLActions.AddIngredients(this.recipe.ingredients));
   }
 
   onDeleteRecipe() {
