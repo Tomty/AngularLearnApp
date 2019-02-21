@@ -15,6 +15,7 @@
         <a 
         class="list-group-item" 
         style="cursor: pointer"
+        [@list1]
         *ngFor="let ing of (ShoppingListState | async).ingredients; let i = index" 
         (click)="onEditItem(i)">
         {{ing.name}} {{ing.amount}}
