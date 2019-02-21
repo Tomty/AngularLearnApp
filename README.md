@@ -13,3 +13,5 @@ This is a project made for learning Angular. It allow the user to manage recipes
 * Http Module
 * Lazy Loading Module, Pre-Loading module
 * Using NgRx Store and NgRx Effects
+* Using Angular Universal Preloading feature with a NodeJs server
+* Angular Animation
